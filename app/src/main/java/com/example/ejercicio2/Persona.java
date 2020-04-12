@@ -6,18 +6,22 @@ public class Persona {
     private String descripcion;
     private String img;
 
-    public Persona(String nombrePersona, String descripcion, String img) {
+    private int img2;
+
+    public Persona(int img2, String nombrePersona, String descripcion, String img) {
+        this.img2 = img2;
         this.nombrePersona = nombrePersona;
         this.descripcion = descripcion;
         this.img = img;
     }
+
     public Persona(){}
 
-    @Override
+   /* @Override
     public String toString(){
 
-        return nombrePersona+" "+descripcion+" "+img;
-    }
+        return img2+" "+nombrePersona+" "+descripcion+" "+img;
+    }*/
 
     public String getNombrePersona() {
         return nombrePersona;
@@ -41,5 +45,12 @@ public class Persona {
 
     public void setImg(String img) {
         this.img = img;
+    }
+    public int getImg2() {
+        return img2;
+    }
+
+    public void setImg2(int img2) {
+        this.img2 = img2;
     }
 }
