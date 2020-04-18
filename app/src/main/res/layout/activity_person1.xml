@@ -13,22 +13,46 @@
        android:text="@string/app_name"
        android:textStyle="bold"
        android:gravity="center"
-       android:id="@+id/id_nombre"
+       android:id="@+id/id_nombre1title"
        android:textSize="30sp"/>
-    <ImageView
-        android:contentDescription="@string/app_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/id_img"
-        android:layout_gravity="center"
-        android:src="@drawable/usuario"/>
+ <ImageView
+     android:contentDescription="@string/app_name"
+     android:layout_width="100sp"
+     android:layout_height="200sp"
+     android:id="@+id/id_img1"
+     android:layout_gravity="center"
+     android:src="@mipmap/usuario"/>
 
-     <TextView
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:id="@+id/id_desc"
-         android:textStyle="italic"
-         android:text="Descripcion"/>
+ <TextView
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:id="@+id/id_desc1"
+     android:textStyle="italic"
+     android:text="@string/txt_descripcion"/>
+
+ <TextView
+     android:id="@+id/textViewNacimiento1"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:text="@string/txt_ciudad_nacimiento" />
+
+ <TextView
+     android:id="@+id/textViewMatricu1"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:text="@string/txt_matricula" />
+
+ <TextView
+     android:id="@+id/textViewNombre1"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:text="@string/txt_nombre" />
+
+ <Button
+     android:id="@+id/atras_btn1"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:text="@string/atras" />
 
 
 </LinearLayout>

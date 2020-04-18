@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Ejercicio2</string>
+    <string name="txt_nombre">Nombre: </string>
+    <string name="txt_descripcion">Descripcion: </string>
+    <string name="txt_foto">Foto</string>
+    <string name="txt_ciudad_nacimiento">Ciudad de nacimiento: </string>
+    <string name="txt_matricula">Matricula: </string>
+    <string name="txt_expresion_creativa">Expresion creativa: </string>
+    <string name="delante">Delante</string>
+    <string name="atras">Back</string>
+    <string name="pickColor">Cambiar fondo</string>
 </resources>

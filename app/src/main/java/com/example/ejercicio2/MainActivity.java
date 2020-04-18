@@ -2,6 +2,7 @@ package com.example.ejercicio2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -55,9 +56,45 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 Persona p = getArrayListPerson().get(position);
-                Toast.makeText(MainActivity.this,"imagen: "+p.getImg2()+" "+" Nombre "+p.getNombrePersona()+" \n imagen: "+p.getImg(),Toast.LENGTH_SHORT).show();
+                //Toast.makeText(MainActivity.this,"imagen: "+p.getImg2()+" "+" Nombre "+p.getNombrePersona()+" \n imagen: "+p.getImg(),Toast.LENGTH_SHORT).show();
 
-                switch (position){}
+                //switch (position){
+                    switch (position){
+
+                        case 0:
+                            Intent newActivity = new Intent(MainActivity.this,PersonActivity1.class);
+                            startActivity(newActivity);
+
+                            //Toast.makeText(MainActivity.this,"imagen: "
+                              //      +p.getImg2()+" "+" Nombre "+p.getNombrePersona()+" \n imagen: "+p.getImg(),Toast.LENGTH_SHORT).show();
+                            break;
+                        case 1:
+                            p.getNombrePersona();
+                            p.getImg();
+                            p.getImg2();
+                            p.getDescripcion();
+
+                            Bundle enviarDato= new Bundle();
+                            enviarDato.putString("Nombre",p.getNombrePersona());
+                            enviarDato.putString("Img",p.getImg());
+                            enviarDato.putString("Desc",p.getDescripcion());
+                            enviarDato.putInt("img2",p.getImg2());
+
+                            Intent newActivity2 = new Intent(MainActivity.this,ColorPickerActivityWin.class);
+                            newActivity2.putExtras(enviarDato);
+
+                            startActivity(newActivity2);
+                            break;
+                        case 2:
+                            Intent newActivity3 = new Intent(MainActivity.this,PersonActivity0.class);
+                            startActivity(newActivity3);
+                            break;
+                        case 3:
+                            Intent newActivityConfigura = new Intent(MainActivity.this, ColorPickerActivityWin.class);
+                            startActivity(newActivityConfigura);
+                        default:
+                    }
+                //}
 
             }
         });
@@ -73,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
 
         arrayList.add(objPersona);
         arrayList.add(new Persona(R.mipmap.usuario,"Pen2","Contable", "No imagen"));
-
+        arrayList.add(new Persona(R.mipmap.usuario,"Persons","Jefe","no imagen"));
         return arrayList;
     }
 }

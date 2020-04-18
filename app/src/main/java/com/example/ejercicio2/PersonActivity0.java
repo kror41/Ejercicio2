@@ -7,24 +7,23 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class PersonActivity1 extends AppCompatActivity {
+public class PersonActivity0 extends AppCompatActivity {
 
-    Button atras;
+    Button back_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_person1);
+        setContentView(R.layout.activity_person0);
 
-        atras=(Button)findViewById(R.id.atras_btn1);
+        back_button=(Button)findViewById(R.id.atras_btn0);
 
-        atras.setOnClickListener(new View.OnClickListener() {
+        back_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent atras=new Intent(PersonActivity1.this,MainActivity.class);
+                Intent atras=new Intent(PersonActivity0.this,MainActivity.class);
                 startActivity(atras);
             }
         });
-
     }
 }
