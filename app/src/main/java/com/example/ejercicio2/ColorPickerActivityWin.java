@@ -60,15 +60,10 @@ public class ColorPickerActivityWin extends AppCompatActivity {
         setContentView(R.layout.activity_color_picker_win);
 
         layout = (LinearLayout)findViewById(R.id.layoutColor);
-        button_select_bg=(Button)findViewById(R.id.color_id_select);
+
         atras_id=(Button)findViewById(R.id.atras_id);
         listaLV = (ListView)findViewById(R.id.lv_config);
-        button_select_bg.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //optionMenu();
-            }
-        });
+
 
 
 
@@ -197,6 +192,8 @@ public class ColorPickerActivityWin extends AppCompatActivity {
 
             editor.putString(idPreferencia+"img",String.valueOf(uriImg));
             editor.commit();
+
+           //lista.notifyDataSetChanged();
 
         }
 

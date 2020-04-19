@@ -9,19 +9,9 @@
     tools:context=".ColorPickerActivityWin">
 
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/pickColor"
-        android:layout_gravity="center"
-
-        android:id="@+id/color_id_select"/>
-
-
-
 <ListView
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:id="@+id/lv_config"/>
 
 

@@ -12,17 +12,16 @@ public class Persona {
     private int img2;//no
 
     public Persona(String img, String nombrePersona, String descripcion) {
-        //this.img2 = img2;
+        this.img = img;
         this.nombrePersona = nombrePersona;
         this.descripcion = descripcion;
-        this.img = img;
+
     }
 
     public Persona(int img, String nombrePersona, String descripcion) {
         this.img2 = img2;
         this.nombrePersona = nombrePersona;
         this.descripcion = descripcion;
-        //this.img = img;
 
     }
 

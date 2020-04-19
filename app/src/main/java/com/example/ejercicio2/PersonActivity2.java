@@ -2,19 +2,35 @@ package com.example.ejercicio2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class PersonActivity2 extends AppCompatActivity {
+    Button atras;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_person2);
+        atras=(Button)findViewById(R.id.atras_btn2);
+
+        atras.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent atras=new Intent(PersonActivity2.this,MainActivity.class);
+                startActivity(atras);
+            }
+        });
+
+
 
         Persona persona2 = new Persona();
         persona2.setNombrePersona("Kirlian Ortiz");
