@@ -3,51 +3,47 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".PersonActivity2">
 
-
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="@string/app_name"
         android:textStyle="bold"
         android:gravity="center"
-        android:id="@+id/nombre2_tituloid"
+        android:id="@+id/id_nombre2"
         android:textSize="30sp"/>
-<ImageView
-    android:layout_width="100sp"
-    android:layout_height="200sp"
-    android:id="@+id/id_img2"
-    android:gravity="center"
-    android:src="@mipmap/usuario"/>
+    <ImageView
+        android:layout_width="100sp"
+        android:layout_height="200sp"
+        android:contentDescription="@string/app_name"
+        android:id="@+id/id_img2"
+        android:layout_gravity="center"
+        android:src="@mipmap/usuario"/>
 
     <TextView
+        android:id="@+id/tvMatricula2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/txt_descripcion"
-        android:id="@+id/dec2_id"/>
+        android:text="@string/txt_matricula"/>
 
     <TextView
+        android:id="@+id/tvNacimiento2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/txt_ciudad_nacimiento"
-        android:id="@+id/nacimiento2_id"/>
+        android:text="@string/txt_ciudad_nacimiento" />
+
     <TextView
+        android:id="@+id/tvExpresion2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/txt_matricula"
-        android:id="@+id/matri2_id"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/txt_nombre"
-        android:id="@+id/nombre2_id"/>
+        android:text="@string/txt_nombre"/>
     <Button
+        android:id="@+id/atras_btn2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/back_btn2"
         android:text="@string/atras"/>
-
 </LinearLayout>

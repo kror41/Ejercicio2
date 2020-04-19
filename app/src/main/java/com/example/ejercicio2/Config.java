@@ -1,7 +1,5 @@
 package com.example.ejercicio2;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -9,11 +7,12 @@ import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class Config extends AppCompatActivity {
 
    Persona objPersona = new Persona();
    TextView personatxt;
@@ -62,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
                     switch (position){
 
                         case 0:
-                            Intent newActivity = new Intent(MainActivity.this,PersonActivity1.class);
+                            Intent newActivity = new Intent(Config.this,PersonActivity1.class);
                             startActivity(newActivity);
 
                             //Toast.makeText(MainActivity.this,"imagen: "
@@ -80,17 +79,17 @@ public class MainActivity extends AppCompatActivity {
                             enviarDato.putString("Desc",p.getDescripcion());
                             enviarDato.putInt("img2",p.getImg2());
 
-                            Intent newActivity2 = new Intent(MainActivity.this,ColorPickerActivityWin.class);
+                            Intent newActivity2 = new Intent(Config.this,ColorPickerActivityWin.class);
                             newActivity2.putExtras(enviarDato);
 
                             startActivity(newActivity2);
                             break;
                         case 2:
-                            Intent newActivity3 = new Intent(MainActivity.this,PersonActivity0.class);
+                            Intent newActivity3 = new Intent(Config.this,PersonActivity0.class);
                             startActivity(newActivity3);
                             break;
                         case 3:
-                            Intent newActivityConfigura = new Intent(MainActivity.this, ColorPickerActivityWin.class);
+                            Intent newActivityConfigura = new Intent(Config.this, ColorPickerActivityWin.class);
                             startActivity(newActivityConfigura);
                             break;
                         default:

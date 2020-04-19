@@ -8,6 +8,7 @@
     android:id="@+id/layoutColor"
     tools:context=".ColorPickerActivityWin">
 
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,52 +17,19 @@
 
         android:id="@+id/color_id_select"/>
 
-    <ImageView
-        android:layout_width="100sp"
-        android:layout_height="200sp"
-        android:id="@+id/img_details"
-        android:layout_gravity="center"
-        android:src="@mipmap/usuario"
-        android:contentDescription="@string/app_name"/>
 
 
+<ListView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/lv_config"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/nombre_id"
-        android:gravity="center"
-        android:textSize="30sp"
-        android:text="@string/txt_nombre"/>
-    <TextView
-        android:id="@+id/matric_id"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/txt_matricula" />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/desc_id"
-        android:textStyle="italic"
-        android:text="@string/txt_descripcion"/>
-
-    <TextView
-        android:id="@+id/ciudad_id"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/txt_ciudad_nacimiento" />
-    <TextView
-        android:id="@+id/creative_id"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/txt_expresion_creativa" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/atras"
-        android:gravity="center"
+        android:layout_gravity="center"
         android:id="@+id/atras_id"/>
-
 
 </LinearLayout>
