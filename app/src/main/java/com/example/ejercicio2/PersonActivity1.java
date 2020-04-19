@@ -32,11 +32,11 @@ public class PersonActivity1 extends AppCompatActivity {
         });
 
         Persona persona1 = new Persona();
-        persona1.setNombrePersona("Pedro");
+        persona1.setNombrePersona("Julio Cruz");
         persona1.setImg2(R.drawable.usuario);
-        persona1.setCiudad_de_nacimiento("Cualquiera");
-        persona1.setMatricula("DC-0000");
-        persona1.setExpresion("No se lo que va aqui");
+        persona1.setCiudad_de_nacimiento("Santo Domingo, Rep. Dom");
+        persona1.setMatricula("DB3790");
+        persona1.setExpresion("Lic. En Informatica");
 
         TextView tv_nombre = (TextView)findViewById(R.id.id_nombre1);
         tv_nombre.setText(persona1.getNombrePersona());

@@ -3,6 +3,7 @@ package com.example.ejercicio2;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -15,6 +16,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
+    String imgdefault = "C:\\Users\\Clara Elena Rivera\\AndroidStudioProjects\\Ejercicio2\\app\\src\\main\\res\\mipmap-hdpi\\usuario.jpg";
    Persona objPersona = new Persona();
    TextView personatxt;
    ListView listaLV;
@@ -62,37 +64,26 @@ public class MainActivity extends AppCompatActivity {
                     switch (position){
 
                         case 0:
-                            Intent newActivity = new Intent(MainActivity.this,PersonActivity1.class);
+                            Intent newActivity = new Intent(MainActivity.this,PersonActivity0.class);
                             startActivity(newActivity);
 
                             //Toast.makeText(MainActivity.this,"imagen: "
                               //      +p.getImg2()+" "+" Nombre "+p.getNombrePersona()+" \n imagen: "+p.getImg(),Toast.LENGTH_SHORT).show();
                             break;
                         case 1:
-                            p.getNombrePersona();
-                            p.getImg();
-                            p.getImg2();
-                            p.getDescripcion();
 
-                            Bundle enviarDato= new Bundle();
-                            enviarDato.putString("Nombre",p.getNombrePersona());
-                            enviarDato.putString("Img",p.getImg());
-                            enviarDato.putString("Desc",p.getDescripcion());
-                            enviarDato.putInt("img2",p.getImg2());
 
-                            Intent newActivity2 = new Intent(MainActivity.this,ColorPickerActivityWin.class);
-                            newActivity2.putExtras(enviarDato);
+                            Intent newActivity2 = new Intent(MainActivity.this,PersonActivity1.class);
 
                             startActivity(newActivity2);
                             break;
                         case 2:
-                            Intent newActivity3 = new Intent(MainActivity.this,PersonActivity0.class);
+                            Intent newActivity3 = new Intent(MainActivity.this,PersonActivity2.class);
                             startActivity(newActivity3);
                             break;
                         case 3:
                             Intent newActivityConfigura = new Intent(MainActivity.this, ColorPickerActivityWin.class);
                             startActivity(newActivityConfigura);
-                            break;
                         default:
                     }
                 //}
@@ -100,19 +91,33 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    private ArrayList<Persona> getArrayListPerson(){
+    private ArrayList<Persona> getArrayListPerson() {
 
         ArrayList<Persona> arrayList = new ArrayList<>();
+        SharedPreferences p = getSharedPreferences("sharedPrefs", MODE_PRIVATE);
+        String imagen0 = p.getString("Paulusimg", null);
+        String imagen1 = p.getString("Julioimg",null);
+        String imagen2 = p.getString("Kirlianimg", null);
 
-        objPersona.setNombrePersona("Pen");
-        objPersona.setDescripcion("Es un contrador");
-        objPersona.setImg("no imagen");
-        objPersona.setImg2(R.mipmap.usuario);
+        if (imagen0 != null){
+            arrayList.add(new Persona(imagen0, "Pen2", "Contable"));
+        }else{
+            arrayList.add(new Persona(R.mipmap.usuario, "Pen2", "Contable"));
+        }
 
-        arrayList.add(objPersona);
-        arrayList.add(new Persona(R.mipmap.usuario,"Pen2","Contable", "No imagen"));
-        arrayList.add(new Persona(R.mipmap.usuario,"Persons","Jefe","no imagen"));
-        arrayList.add(new Persona(R.mipmap.usuario,"Config","usuario","configuracion"));
+        if (imagen1 != null){
+            arrayList.add(new Persona(imagen1, "Pen2", "Contable"));
+        }else{
+            arrayList.add(new Persona(R.mipmap.usuario, "Pen2", "Contable"));
+        }
+
+        if (imagen2 != null){
+            arrayList.add(new Persona(imagen2, "Pen2", "Contable"));
+        }else{
+            arrayList.add(new Persona(R.mipmap.usuario, "Pen2", "Contable"));
+        }
+        arrayList.add(new Persona(R.mipmap.config2, "Pen2", "Contable"));
+
         return arrayList;
     }
 }

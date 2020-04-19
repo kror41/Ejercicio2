@@ -17,11 +17,11 @@ public class PersonActivity2 extends AppCompatActivity {
         setContentView(R.layout.activity_person2);
 
         Persona persona2 = new Persona();
-        persona2.setNombrePersona("Pedro");
+        persona2.setNombrePersona("Kirlian Ortiz");
         persona2.setImg2(R.drawable.usuario);
-        persona2.setCiudad_de_nacimiento("Cualquiera");
-        persona2.setMatricula("DC-0000");
-        persona2.setExpresion("No se lo que va aqui");
+        persona2.setCiudad_de_nacimiento("Santo Domingo, Rep. Dom.");
+        persona2.setMatricula("CG4780");
+        persona2.setExpresion("Lic. En Informatica");
 
         TextView tv_nombre = (TextView)findViewById(R.id.id_nombre2);
         tv_nombre.setText(persona2.getNombrePersona());

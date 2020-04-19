@@ -1,6 +1,7 @@
 package com.example.ejercicio2;
 
 import android.content.Context;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -50,7 +51,13 @@ public class ListAdapterPersona extends BaseAdapter {
         ImageView imag = (ImageView) convertView.findViewById(R.id.imagen_01);
         //TextView txtnombre = (TextView) convertView.findViewById(R.id.id_nombre);
         //TextView txtdescripcion = (TextView) convertView.findViewById(R.id.id_desc);
-        imag.setImageResource(persona.getImg2());
+        if(persona.getImg2() != 0){
+            imag.setImageResource(persona.getImg2());
+        }
+        if(persona.getImg() != null) {
+            imag.setImageURI(Uri.parse(persona.getImg()));
+        }
+
         //txtnombre.setText(persona.getNombrePersona());
         //txtdescripcion.setText(persona.getDescripcion());
 

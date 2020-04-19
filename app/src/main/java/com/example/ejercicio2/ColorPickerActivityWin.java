@@ -205,14 +205,28 @@ public class ColorPickerActivityWin extends AppCompatActivity {
 
         ArrayList<Persona> arrayList = new ArrayList<>();
 
-        /*SharedPreferences p = getSharedPreferences("sharedPrefs",MODE_PRIVATE);
+        SharedPreferences p = getSharedPreferences("sharedPrefs",MODE_PRIVATE);
         String imagen0 = p.getString("Paulusimg",null);
-        String imagen1 = p.getString("Julionimg",null);
+        String imagen1 = p.getString("Julioimg",null);
         String imagen2 = p.getString("Kirlianimg",null);
-         */
-        arrayList.add(new Persona(R.id,"Pen2","Contable", "No imagen"));
-        arrayList.add(new Persona(R.id.id_img1,"Pen2","Contable", "No imagen"));
-        arrayList.add(new Persona(R.id.id_img2,"Persons","Jefe","no imagen"));
+
+        if (imagen0 != null){
+            arrayList.add(new Persona(imagen0, "Pen2", "Contable"));
+        }else{
+            arrayList.add(new Persona(R.mipmap.usuario, "Pen2", "Contable"));
+        }
+
+        if (imagen1 != null){
+            arrayList.add(new Persona(imagen1, "Pen2", "Contable"));
+        }else{
+            arrayList.add(new Persona(R.mipmap.usuario, "Pen2", "Contable"));
+        }
+
+        if (imagen2 != null){
+            arrayList.add(new Persona(imagen2, "Pen2", "Contable"));
+        }else{
+            arrayList.add(new Persona(R.mipmap.usuario, "Pen2", "Contable"));
+        }
 
         return arrayList;
     }
